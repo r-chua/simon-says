@@ -54,7 +54,7 @@ function animatePress(currentColor) {
     }, 100);
 }
 
-$(".btn").click(function () {
+$(".btn").one("click", function () {
     if (!gameStart) return;
 
     var userChosenColor = $(this).attr("id");
@@ -71,7 +71,6 @@ function checkAnswer(currentIndex) {
             setTimeout(nextSequence, 1000);
         }
     } else {
-        $(".btn").off("click"); // Disable button clicks
         gameOver();
     }
 }
