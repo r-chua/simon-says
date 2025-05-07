@@ -71,6 +71,7 @@ function checkAnswer(currentIndex) {
             setTimeout(nextSequence, 1000);
         }
     } else {
+        $(".btn").off("click"); // Disable button clicks
         gameOver();
     }
 }
