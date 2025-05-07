@@ -54,7 +54,7 @@ function animatePress(currentColor) {
     }, 100);
 }
 
-$(".btn").one("click", function () {
+$(".btn").click(function () {
     if (!gameStart) return;
 
     var userChosenColor = $(this).attr("id");
